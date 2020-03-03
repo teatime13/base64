@@ -11,6 +11,9 @@ class Base64:
 
         self.make_wordlist()
 
+    def __str__(self):
+        return self.encoded_data
+
 
     def make_wordlist(self):
         a_bit = 0b0
@@ -81,5 +84,8 @@ class Base64:
 if __name__ == "__main__":
     base64 = Base64()
     base64.encode('sample')
+    print(base64)
     base64.encode('A')
+    print(base64)
     base64.encode('ABCDEFG')
+    print(base64)
