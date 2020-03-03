@@ -2,6 +2,7 @@ class Base64:
     def __init__(self):
         #self.debug = True
         self.debug =False
+        self.a_str = ''
         self.wordlist = {}
         self.bits = ''
         self.string_after_conversion = ''
@@ -75,7 +76,7 @@ class Base64:
         self.converting_from_table()
         self.replenishment_equal()
 
-        print(self.encoded_data)
+        print(self.a_str + ' : ' + self.encoded_data)
 
 if __name__ == "__main__":
     base64 = Base64()
